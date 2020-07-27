@@ -1,0 +1,21 @@
+Formulae for URBuddy spreadsheet database 
+
+Sheet1
+A2: =Sheet2!A2
+...
+
+C2: =IF(OR(ISBLANK(Sheet2!B2)), "", Sheet2!B2)
+C3: =IF(OR(ISBLANK(Sheet2!B3),ISBLANK(Sheet2!B2)), "", Sheet2!B3-Sheet2!B2)
+...
+
+D2: =IF(HOUR(Sheet2!A8) > 22, "Y", "N")
+D3: =IF(ISBLANK(Sheet2!B3), "", IF(HOUR(Sheet2!A3) > 22, "Y", "N"))
+...
+
+E2: =Sheet2!C2
+...
+
+
+Max/Min
+A2: =MAX(Sheet1!C:C)
+B2: =MIN(Sheet1!C:C)
